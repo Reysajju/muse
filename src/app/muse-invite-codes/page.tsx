@@ -62,7 +62,7 @@ export default function MuseInviteCodesSeoPage() {
         </div>
 
         <div className="my-8">
-          <AdSlot format="banner-728x90" />
+          <AdSlot format="728x90" />
         </div>
 
         <div className="space-y-6 text-sm text-zinc-300 leading-relaxed">

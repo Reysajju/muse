@@ -93,7 +93,7 @@ export default function HowItWorksPage() {
           </div>
         </div>
 
-        <AdSlot format="banner-728x90" />
+        <AdSlot format="728x90" />
 
         {/* The 30 Copy Rule Explanation */}
         <div className="rounded-2xl border border-zinc-800 bg-zinc-900/60 p-6 sm:p-8 my-8">

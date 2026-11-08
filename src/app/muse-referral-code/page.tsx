@@ -44,7 +44,7 @@ export default function MuseReferralCodePage() {
           </p>
         </div>
 
-        <AdSlot format="banner-728x90" />
+        <AdSlot format="728x90" />
 
         <div className="space-y-6 text-xs sm:text-sm text-zinc-300 leading-relaxed my-8">
           <div className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6">

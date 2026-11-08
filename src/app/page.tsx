@@ -142,7 +142,7 @@ export default function HomePage() {
 
       <main className="flex-1 max-w-6xl mx-auto w-full px-4 sm:px-6 pt-8 pb-16">
         {/* Top Adsterra Ad Banner */}
-        <AdSlot format="banner-728x90" />
+        <AdSlot format="728x90" />
 
         {/* Hero Section - Realistic, refined & authentic */}
         <section className="text-center py-6 sm:py-10 max-w-3xl mx-auto">
@@ -334,7 +334,7 @@ export default function HomePage() {
 
         {/* Bottom Banner */}
         <div className="mt-12">
-          <AdSlot format="banner-728x90" />
+          <AdSlot format="728x90" />
         </div>
       </main>
 

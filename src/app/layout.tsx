@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -43,6 +44,20 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-zinc-950 text-zinc-100 font-sans">
         {children}
+
+        {/* Adsterra Popunder Script */}
+        <Script
+          id="adsterra-popunder"
+          src="https://bicea.org/14/bb12f9ebf50e5fe179b168308d5612e0"
+          strategy="afterInteractive"
+        />
+
+        {/* Adsterra Social Bar Script */}
+        <Script
+          id="adsterra-social-bar"
+          src="https://afders.org/1/3935576bbe7bfd78d3b554940def07a9"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
