@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MuseCodes – Muse App Invite Code Sharing Hub 🚀
 
-## Getting Started
+A high-performance, self-sufficient community platform for sharing and discovering working **Muse app invite codes**. Built with Next.js (App Router), Tailwind CSS, and optimized for instant 1-click deployment on **Vercel**.
 
-First, run the development server:
+---
+
+## ⚡ Key Highlights & Features
+
+1. **Zero External DB Setup Needed (Self-Sufficient)**:
+   - Works immediately out of the box on Vercel without requiring third-party database logins or complex configurations.
+   - Built with persistent JSON file storage & in-memory caching fallback.
+   - **No Dummy Data**: Clean empty state by default. Only genuine codes submitted by real users are displayed.
+
+2. **Strict 30-Copy Limit Per Code**:
+   - Every invite code can be claimed a **maximum of 30 times**.
+   - Live countdown displays remaining claims (`29/30 left`).
+   - Automatically marks code as `exhausted` upon reaching 30 copies to eliminate dead codes.
+
+3. **5-Second Countdown Ad Interstitials**:
+   - **Add Code Flow**: When a user submits an invite code, a 5-second countdown sponsor check runs before confirming and publishing the code live.
+   - **Copy Code Flow**: When a visitor clicks Copy, a 5-second countdown ad modal displays before copying the code to the clipboard.
+
+4. **Realistic, Human-Designed UI (Not an "AI Template" Look)**:
+   - Deep slate/zinc charcoal dark aesthetic (`#09090b` / `#18181b`).
+   - Crisp borders, clean typography (Geist Sans & Mono), verified status badges, and subtle amber/emerald accents.
+   - Clean empty state with prompt when zero codes exist.
+
+5. **Adsterra Monetization Ready**:
+   - Google AdSense strictly bans referral and invite code directories under their "Thin Content / Low Value" policy.
+   - **Adsterra** (`adsterra.com`) provides instant approval, zero minimum traffic restrictions, and high CPMs for coupon/code-sharing sites.
+   - Placements ready:
+     - 728x90 Header Banner
+     - In-feed Native Ad every 6th code card
+     - 5-second Countdown Interstitials (Direct Link / Sponsor Banner)
+     - Mobile Sticky Bottom Ad
+
+6. **Admin Dashboard (`/admin`)**:
+   - Passcode protected (`museadmin2026`).
+   - View all stored codes, reset copy counts, hide/restore codes, or delete permanently.
+   - View user-submitted spam/expired reports.
+
+---
+
+## 🛠️ Local Development
 
 ```bash
+# 1. Install dependencies
+npm install
+
+# 2. Run local development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 How to Host on Vercel (1-Click)
 
-## Learn More
+1. Push this folder to your GitHub account:
+   ```bash
+   git add .
+   git commit -m "MuseCodes website ready"
+   git push origin main
+   ```
+2. Go to [vercel.com](https://vercel.com) and click **"Add New Project"**.
+3. Select your repository and click **Deploy**.
+4. **Zero configuration required!** The website will immediately build and run.
 
-To learn more about Next.js, take a look at the following resources:
+### Optional Environment Variables (in Vercel Dashboard):
+| Variable | Description | Default |
+|---|---|---|
+| `ADMIN_SECRET` | Admin control panel passcode | `museadmin2026` |
+| `NEXT_PUBLIC_ADSTERRA_KEY` | Your Adsterra Ad Unit Key | Realistic preview placeholder |
+| `NEXT_PUBLIC_SITE_URL` | Your production domain | `https://musecodes.vercel.app` |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🛡️ Disclaimer
+*Unofficial community site, not affiliated with Muse.*
