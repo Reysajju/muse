@@ -27,8 +27,13 @@ function ensureDataFile(): void {
     }
     const codesPath = getCodesFilePath();
     if (!fs.existsSync(codesPath)) {
-      // Clean, empty database out of the box - no fake/dummy codes per user requirement!
-      fs.writeFileSync(codesPath, JSON.stringify([], null, 2), "utf8");
+      const defaultSeedPath = path.join(process.cwd(), "data", "muse_codes.json");
+      if (fs.existsSync(defaultSeedPath)) {
+        const seedData = fs.readFileSync(defaultSeedPath, "utf8");
+        fs.writeFileSync(codesPath, seedData, "utf8");
+      } else {
+        fs.writeFileSync(codesPath, JSON.stringify([], null, 2), "utf8");
+      }
     }
     const reportsPath = getReportsFilePath();
     if (!fs.existsSync(reportsPath)) {
